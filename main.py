@@ -71,8 +71,7 @@ def run_server(ip='localhost', port=5000):
         time = datetime.now()
         json_dict[str(time)] = data_dict
         with open('storage/data.json', 'a') as f:
-            json.dump(json_dict, f)
-            f.write('\n')
+            json.dump(json_dict, f, indent=4)
 
 
 if __name__ == '__main__':
